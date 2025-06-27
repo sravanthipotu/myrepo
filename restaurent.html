@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Restaurant Menu</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.5; }
+    header, .menu-section { padding: 20px; text-align: center; }
+    header { background: #333; color: #fff; }
+    .menu-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 1200px; margin: auto; }
+    .menu-item { background: #f8f8f8; border-radius: 8px; width: 250px; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .menu-item img { width: 100%; border-radius: 5px; }
+    .menu-item h3 { margin: 10px 0 5px; font-size: 1.1em; }
+    .menu-item p { font-size: 0.9em; margin: 5px 0; }
+    .price { font-weight: bold; margin-top: 10px; color: #e67e22; }
+    @media (max-width: 600px) {
+      .menu-container { flex-direction: column; align-items: center; }
+      .menu-item { width: 90%; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Our Menu</h1>
+    <p>Delicious dishes, crafted with love</p>
+  </header>
+
+  <section class="menu-section">
+    <div class="menu-container">
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086" alt="Salmon Burger" />
+        <h3>Salmon Burger</h3>
+        <p>Fresh salmon patty, cheese, lettuce, tartar sauce</p>
+        <div class="price">$3.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349" alt="Cheese Burger" />
+        <h3>Cheese Burger</h3>
+        <p>Beef patty, cheddar, tomato, lettuce, pickles</p>
+        <div class="price">$2.40</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591" alt="BBQ Chicken Pizza" />
+        <h3>BBQ Chicken Pizza</h3>
+        <p>Grilled chicken, BBQ sauce, mozzarella, onions</p>
+        <div class="price">$4.00</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1541745537411-b8046dc6d66c" alt="Cheese Pizza" />
+        <h3>Cheese Pizza</h3>
+        <p>Classic cheese, tomato sauce, basil</p>
+        <div class="price">$3.70</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1543253687-c931c8e01820" alt="Coca‑Cola" />
+        <h3>Coca‑Cola</h3>
+        <p>Chilled soda with ice</p>
+        <div class="price">$1.90</div>
+      </div>
+
+    </div>
+  </section>
+</body>
+</html>
