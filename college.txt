@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sphoorthy Engineering College</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {font-family: Arial, sans-serif;}
+    .hero {padding: 80px 20px; background: #f4f4f4; text-align:center;}
+    .hero h1 {font-size:2.5rem;}
+    .section {padding: 60px 20px;}
+    footer {background:#343a40; color:white; text-align:center; padding:20px 0;}
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+  <a class="navbar-brand" href="#">SEC Hyderabad</a>
+  <button class="navbar-toggler" data-toggle="collapse" data-target="#nav"><span class="navbar-toggler-icon"></span></button>
+  <div class="collapse navbar-collapse" id="nav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+      <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>Welcome to Sphoorthy Engineering College</h1>
+  <p>Established 2004 • AICTE Approved, JNTU‑Hyderabad Affiliated • NAAC “A” Grade</p>
+  <a href="#courses" class="btn btn-primary btn-lg">View Courses</a>
+</section>
+
+<section id="about" class="section container">
+  <h2>About Us</h2>
+  <p>Sphoorthy Engineering College, established in 2004, is affiliated to JNTU Hyderabad, approved by AICTE and accredited ‘A’ grade by NAAC. Known for strong industry‑academia linkage, R&D initiatives, and a modern campus :contentReference[oaicite:3]{index=3}.</p>
+</section>
+
+<section id="courses" class="section bg-light container">
+  <h2>Courses Offered</h2>
+  <div class="row">
+    <div class="col-md-4"><strong>CSE – Computer Science & Engineering</strong></div>
+    <div class="col-md-4"><strong>CSE – Data Science</strong></div>
+    <div class="col-md-4"><strong>CSE – AI & ML</strong></div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-md-4"><strong>CSE – Cyber Security</strong></div>
+    <div class="col-md-4"><strong>Civil Engineering</strong></div>
+    <div class="col-md-4"><strong>Electronics & Communication</strong></div>
+  </div>
+  <p class="mt-4">All B.Tech programs are 4 years in duration :contentReference[oaicite:4]{index=4}.</p>
+</section>
+
+<section id="contact" class="section container">
+  <h2>Contact Us</h2>
+  <p><strong>Address:</strong> Nadergul Village, Sagar Road, Near Vanasthalipuram, Hyderabad, Telangana – 501510 :contentReference[oaicite:5]{index=5}</p>
+  <p><strong>Phone:</strong> 9966631091, 9392119392 · <strong>Email:</strong> info@sphoorthyengg.ac.in</p>
+  <p><strong>Website:</strong> <a href="https://www.sphoorthyengg.ac.in">www.sphoorthyengg.ac.in</a></p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Sphoorthy Engineering College. All Rights Reserved.</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
