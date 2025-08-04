@@ -1,28 +1,32 @@
 version: 0.2
-
+env:
+  variables:
+    AWS_REGION: us-east-1
+    REPOSITORY_URI: 134606630805.dkr.ecr.us-east-1.amazonaws.com/ecrrepo
 phases:
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
-      - aws --version
-      - $(aws ecr get-login --no-include-email --region $AWS_us-east-1)
-      - REPOSITORY_URI=134606630805.dkr.ecr.us-east-1.amazonaws.com/ecrrepo
+      - aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $REPOSITORY_URI
       - IMAGE_TAG=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
-
   build:
     commands:
       - echo Building the Docker image...
       - docker build -t $REPOSITORY_URI:$IMAGE_TAG .
       - docker tag $REPOSITORY_URI:$IMAGE_TAG $REPOSITORY_URI:latest
-
   post_build:
     commands:
-      - echo Pushing the Docker image to ECR...
+      - echo Pushing the Docker image...
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - docker push $REPOSITORY_URI:latest
-      - echo Writing image definitions file...
-      - printf '[{"name":"container-name","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
-
+      - echo Creating imagedefinitions.json file...
+      - printf '[{"name":"koppee","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
 artifacts:
-  files: 
+  files:
     - imagedefinitions.json
+
+React
+
+Reply
+
+
