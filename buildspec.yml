@@ -11,17 +11,23 @@ phases:
   build:
     commands:
       - echo Building the Docker image...
-     
-      - docker tag $REPOSITORY_URI:$IMAGE_TAG $REPOSITORY_URI:latest
+      - docker build -t $REPOSITORY_URI:latest .
   post_build:
     commands:
       - echo Pushing the Docker image...
       - docker push $REPOSITORY_URI:latest
       - echo Creating imagedefinitions.json file...
-      - printf '[{"name":"ecsrepo","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
+      - printf '[{"name":"ecsrepo","imageUri":"%s"}]' $REPOSITORY_URI:latest > imagedefinitions.json
 artifacts:
   files:
     - imagedefinitions.json
+
+
+
+
+
+
+
 
 
 
