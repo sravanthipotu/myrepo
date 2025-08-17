@@ -11,6 +11,16 @@ env:
     commands:
       - echo Building the Docker image...
       - docker build -t $REPOSITORY_URI:latest .
+      424592695688.dkr.ecr.us-east-1.amazonaws.com/ecsrepo:latest
+- echo "Listing Docker images..."
+- docker images
+
+- echo "Tagging image explicitly..."
+- docker tag ecsrepo:latest $REPOSITORY_URI:latest
+
+- echo "Trying to push again..."
+- docker push $REPOSITORY_URI:latest
+
   post_build:
     commands:
       - echo Pushing the Docker image...
