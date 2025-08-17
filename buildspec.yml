@@ -3,7 +3,6 @@ env:
   variables:
     AWS_REGION: us-east-1
     REPOSITORY_URI: 424592695688.dkr.ecr.us-east-1.amazonaws.com/ecsrepo
-phases:
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
